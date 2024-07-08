@@ -1,0 +1,83 @@
+
+
+.ecom-login {
+&__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    min-height: 100%;
+
+    @media screen and (max-width: 767px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+&__content {
+    display: grid;
+    place-content: center;
+}
+
+&__image {
+    text-align: center;
+}
+
+&__heading {
+    margin-bottom: 1.5rem;
+    font-size: x-large;
+    font-weight: bold;
+    &--subtitle{
+        font-weight: 100;
+    }
+}
+
+&__footer {
+    margin-top: 1rem;
+    text-align: center;
+}
+}
+
+.ecom-login-banner {
+//background-image: url('../../../assets/login-background.png');
+background-size: contain;
+display: grid;
+place-content: center;
+
+&__image-wrapper {
+    max-width: 31.563rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+&__image {
+    width: 100%;
+    height: 100%;
+}
+
+&__content {
+    max-width: 41rem;
+}
+
+&__heading {
+    color: #fff;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    display: none;
+}
+}
+
+.ecom-login-form {
+min-width: 26.25rem;
+.ecom-button-group {
+    button {
+        margin-top: 0.75rem;
+        width: 100%;
+    }
+    nb-spinner {
+        justify-content: center;
+    }
+}
+}
+
+

@@ -1,0 +1,42 @@
+<div class="ecom-login__container">
+    <div class="ecom-login-banner">
+        <section class="ecom-login-banner__content">
+            <h1 class="ecom-login-banner__heading">WOW</h1>
+            <div class="ecom-login-banner__image-wrapper">
+                <img src="assets/login.svg" alt="Login Banner" class="ecom-login-banner__image" />
+            </div>
+        </section>
+    </div>
+
+    <div class="ecom-login__content">
+        <div class="ecom-login__image">
+            <img alt="logo" src="assets/logo.png" height="150px" width="150px" />
+        </div>
+        <div class="ecom-login__heading">Login To Exclusive</div>
+        <p class="ecom-login__heading--subtitle">Enter your details</p>
+
+        <div class="ecom-login-form">
+
+            <form>
+                <ecom-form-wrapper label="Email">
+                    <nb-form-field>
+                        <input type="text" nbInput fullWidth status="primary" placeholder="Enter Email">
+                    </nb-form-field>
+
+                </ecom-form-wrapper>
+
+                <ecom-form-wrapper label="Password">
+                    <nb-form-field>
+                        <input [type]="getInputType()" nbInput fullWidth status="primary" placeholder="Enter Password">
+                        <nb-icon nbSuffix (click)="toggleShowPassword()"
+                            [icon]="showPassword ? 'eye-outline' : 'eye-off-2-outline'" pack="eva"
+                            [attr.aria-label]="showPassword ? 'hide password' : 'show password'">
+                        </nb-icon>
+                    </nb-form-field>
+                </ecom-form-wrapper>
+                <button type="submit" nbButton status="primary" fullWidth>Login</button>
+            </form>
+
+        </div>
+    </div>
+</div>

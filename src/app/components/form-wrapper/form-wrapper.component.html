@@ -1,0 +1,7 @@
+<div class="form-control__wrapper">
+    <label *ngIf="label" class="form-control__label">{{ label }}</label>
+    <ng-content></ng-content>
+   
+    <ng-template *ngIf="errorTemplate" [ngTemplateOutlet]="errorTemplate"></ng-template>
+    <p *ngIf="errorMessage" class="custom-error-message">{{ errorMessage }}</p>
+</div>

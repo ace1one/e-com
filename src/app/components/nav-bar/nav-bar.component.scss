@@ -1,0 +1,122 @@
+
+.ecom-nav-bar{
+    width: 100%;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    &__logo{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    &__list{
+        ul{
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 55px;
+    
+            &:hover {
+              text-decoration: underline;
+             
+            }
+        }
+    }
+    &__searchbar{
+        display: flex;
+        align-items: center;
+        &--text{
+            width: 250px;
+        }
+        &--textbox{
+            border: 1px solid #ddd;
+            padding: 10px 10px;
+            border-radius: 8px;
+            font-size: 1rem;
+            
+            &::placeholder {
+                color: #aaa;
+              }
+              &:focus{
+                outline:none
+              }
+        }
+        &--button{
+            border: none;
+            background: none;
+            cursor: pointer;
+            margin-left: 5px;
+            font-size: 1rem;
+      
+            &:hover {
+              color: #333;
+            }
+        }
+    }
+}
+
+.custom-nb-form-field .custom-input {
+    border-color: rgba(143, 155, 179, 0.16) /* Inherit border color from parent */
+  }
+  
+  .custom-nb-form-field .custom-input:hover,
+  .custom-nb-form-field .custom-input:focus {
+    border-color: rgba(143, 155, 179, 0.16); /* Prevent border color change on hover and focus */
+    box-shadow: none; /* Remove any shadow effect */
+    background-color: rgba(143, 155, 179, 0.16);;
+}
+
+.custom-nb-form-field .custom-input:focus + .custom-icon {
+    color: inherit; /* Ensure icon color remains the same on focus */
+  }
+
+
+
+
+// .navbar__container {
+   
+  
+//     .navbar__logo {
+     
+//     }
+  
+//     .navbar__list {
+//       ul {
+       
+  
+//         li {
+          
+//         }
+//       }
+//     }
+  
+//     .navbar__search {
+      
+  
+//       input {
+        
+  
+       
+//       }
+  
+//       button {
+//         border: none;
+//         background: none;
+//         cursor: pointer;
+//         margin-left: 5px;
+//         font-size: 1rem;
+  
+//         &:hover {
+//           color: #333;
+//         }
+//       }
+//     }
+//   }
