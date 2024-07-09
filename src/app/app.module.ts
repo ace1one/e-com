@@ -8,8 +8,10 @@ import { NbButton, NbButtonModule, NbIconModule, NbLayoutModule, NbThemeModule }
 import { AuthModule } from './auth/auth.module';
 import { LoginComponent } from './auth/login/login.component';
 import { ComponentsModule } from './components/components.module';
-import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { TopBarComponent } from './layout/top-bar/top-bar.component';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { PageModule } from './page/page.module';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,9 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbEvaIconsModule,
     NbLayoutModule,
     NbButtonModule,
-    ComponentsModule,
-    NbIconModule
+
+    NbIconModule,
+    LayoutModule
     
   ],
   providers: [],

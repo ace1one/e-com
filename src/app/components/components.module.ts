@@ -1,18 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { NbActionsModule, NbFormFieldModule, NbIconModule, NbInputModule, NbLayoutModule, NbThemeModule } from '@nebular/theme';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { TopBarComponent } from '../layout/top-bar/top-bar.component';
+import { NbActionsModule, NbCardModule, NbFormFieldModule, NbIconModule, NbInputModule, NbLayoutModule, NbListModule, NbThemeModule } from '@nebular/theme';
+import { NavBarComponent } from '../layout/nav-bar/nav-bar.component';
 import { FormWrapperComponent } from './form-wrapper/form-wrapper.component';
+import { LinkDirective } from './link/link.directive';
+import { GapDirective } from './gap/gap.directive';
+import { SideCategoryComponent } from './side-category/side-category.component';
+import { ImageSliderComponent } from './image-slider/image-slider.component';
 
 
 
 
 @NgModule({
   declarations: [
-    TopBarComponent,
-    NavBarComponent,
-    FormWrapperComponent
+    FormWrapperComponent,
+    LinkDirective,
+    GapDirective,
+    SideCategoryComponent,
+    ImageSliderComponent
   ],
   imports: [
     CommonModule,
@@ -21,13 +27,16 @@ import { FormWrapperComponent } from './form-wrapper/form-wrapper.component';
     NbActionsModule,
     NbIconModule,
     NbFormFieldModule,
-    NbInputModule
+    NbInputModule,
+    NbListModule,
+    NbCardModule
   ],
   exports:[
-    TopBarComponent,
-    NavBarComponent,
     NbIconModule,
-    FormWrapperComponent
+    FormWrapperComponent,
+    LinkDirective,
+    SideCategoryComponent,
+    ImageSliderComponent,
   ]
 })
 export class ComponentsModule { }

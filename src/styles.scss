@@ -1,6 +1,7 @@
 @import './theme';
 
 @import '@nebular/theme/styles/globals';
+@import './app//components//link/link.scss';
 
 @include nb-install() {
   @include nb-theme-global();

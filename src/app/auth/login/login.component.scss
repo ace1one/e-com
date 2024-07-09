@@ -34,6 +34,10 @@
     margin-top: 1rem;
     text-align: center;
 }
+
+&__forgotpass{
+    margin-bottom: 5px;
+}
 }
 
 .ecom-login-banner {
@@ -41,6 +45,7 @@
 background-size: contain;
 display: grid;
 place-content: center;
+
 
 &__image-wrapper {
     max-width: 31.563rem;

@@ -1,0 +1,111 @@
+.link{
+    text-decoration: none;
+    cursor: pointer;
+    &--normal{
+        font-weight: 400;
+    }
+    &--medium{
+        font-weight: 500;
+    }
+    &--bold{
+        font-weight: 700;
+    }
+    &--basic{
+        color: nb-theme(color-basic-600);
+        &:hover{
+            color:nb-theme(color-basic-700)
+        }
+        &:active{
+            color:nb-theme(color-basic-800)
+        }
+        &:focus{
+            color:nb-theme(color-basic-600)
+        }
+        &[disabled]{
+            color:nb-theme(color-basic-400);
+            cursor: not-allowed;
+        }
+    }
+    &--primary{
+        color: nb-theme(color-primary-600);
+        &:hover{
+            color:nb-theme(color-primary-700)
+        }
+        &:active{
+            color:nb-theme(color-primary-800)
+        }
+        &:focus{
+            color:nb-theme(color-primary-600)
+        }
+        &[disabled]{
+            color:nb-theme(color-primary-400);
+            cursor: not-allowed;
+        }
+    }
+    &--success{
+        color: nb-theme(color-success-600);
+        &:hover{
+            color:nb-theme(color-success-700)
+        }
+        &:active{
+            color:nb-theme(color-success-800)
+        }
+        &:focus{
+            color:nb-theme(color-success-600)
+        }
+        &[disabled]{
+            color:nb-theme(color-success-400);
+            cursor: not-allowed;
+        }
+    }
+    &--warning{
+        color: nb-theme(color-warning-600);
+        &:hover{
+            color:nb-theme(color-warning-700)
+        }
+        &:active{
+            color:nb-theme(color-warning-800)
+        }
+        &:focus{
+            color:nb-theme(color-warning-600)
+        }
+        &[disabled]{
+            color:nb-theme(color-warning-400);
+            cursor: not-allowed;
+        }
+    }
+
+    &--danger{
+        color: nb-theme(color-danger-600);
+        &:hover{
+            color:nb-theme(color-danger-700)
+        }
+        &:active{
+            color:nb-theme(color-danger-800)
+        }
+        &:focus{
+            color:nb-theme(color-danger-600)
+        }
+        &[disabled]{
+            color:nb-theme(color-danger-400);
+            cursor: not-allowed;
+        }
+    }
+
+    &--info{
+        color: nb-theme(color-info-600);
+        &:hover{
+            color:nb-theme(color-info-700)
+        }
+        &:active{
+            color:nb-theme(color-info-800)
+        }
+        &:focus{
+            color:nb-theme(color-info-600)
+        }
+        &[disabled]{
+            color:nb-theme(color-info-400);
+            cursor: not-allowed;
+        }
+    }
+}

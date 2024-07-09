@@ -14,6 +14,8 @@ import { ComponentsModule } from '../components/components.module';
   imports: [
     CommonModule,
     AuthRoutingModule,
+    NbThemeModule.forRoot({ name: 'custom' }),
+    NbLayoutModule,
     NbButtonModule,
     NbFormFieldModule,
     NbInputModule,
