@@ -8,6 +8,9 @@ import { LinkDirective } from './link/link.directive';
 import { GapDirective } from './gap/gap.directive';
 import { SideCategoryComponent } from './side-category/side-category.component';
 import { ImageSliderComponent } from './image-slider/image-slider.component';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderComponent } from './header/header.component';
+import { ProductContentComponent } from './product-content/product-content.component';
 
 
 
@@ -18,7 +21,9 @@ import { ImageSliderComponent } from './image-slider/image-slider.component';
     LinkDirective,
     GapDirective,
     SideCategoryComponent,
-    ImageSliderComponent
+    ImageSliderComponent,
+    HeaderComponent,
+    ProductContentComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +34,8 @@ import { ImageSliderComponent } from './image-slider/image-slider.component';
     NbFormFieldModule,
     NbInputModule,
     NbListModule,
-    NbCardModule
+    NbCardModule,
+    NgbCarouselModule
   ],
   exports:[
     NbIconModule,
@@ -37,6 +43,8 @@ import { ImageSliderComponent } from './image-slider/image-slider.component';
     LinkDirective,
     SideCategoryComponent,
     ImageSliderComponent,
+    HeaderComponent,
+    ProductContentComponent
   ]
 })
 export class ComponentsModule { }

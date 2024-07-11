@@ -1,0 +1,23 @@
+<div class="header__container">
+    <div class="header__title">
+        <div class="header__title--vertical"></div>
+        <div class="header__title--name">
+            {{titleHeader}}
+        </div>
+    </div>
+
+    <div class="header__subtitle">
+        <div class="header__subtitle--name">
+            {{ subtitle }}
+        </div>
+        <div *ngIf="showArw" class="header__subtitle--arrow">
+            <div class="header__subtitle--arrow--left">
+                <nb-icon icon="arrow-left" pack="ecom-header"></nb-icon>
+            </div>
+            <div class="header__subtitle--arrow--right">
+                 <nb-icon icon="arrow-right" pack="ecom-header"></nb-icon>
+            </div>
+        </div>
+
+    </div>
+</div>

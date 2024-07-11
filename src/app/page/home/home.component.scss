@@ -1,6 +1,10 @@
 .home{
     &__banner{
         display: flex;
-        
+        margin: 0 0 20px 0px;
+        &--slider{
+            padding: 20px;
+            width: 100%;
+        }
     }
 }

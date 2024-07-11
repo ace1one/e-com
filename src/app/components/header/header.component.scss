@@ -1,0 +1,60 @@
+@import '../../../theme.scss';
+
+.header {
+    &__container{
+        padding: 20px;
+    }
+    &__title {
+        display: flex;
+        align-items: center; 
+
+        &--vertical {
+            height: 35px;
+            width: 15px;
+            background-color: nb-theme(color-primary-500);
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+        &--name{
+            font-size: 16px;
+            font-weight: 600;
+            color: nb-theme(color-primary-500);
+        }
+    }
+    &__subtitle{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        &--name{
+            font-size: 36px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            margin: 15px 0 0 0;
+        }
+        &--arrow{
+            display: flex;
+
+            &--right{
+                height: 46px;
+                width: 46px;
+                border-radius: 26px;
+                background-color: nb-theme(color-basic-300);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &--left{
+                height: 46px;
+                width: 46px;
+                border-radius: 26px;
+                background-color: nb-theme(color-basic-300);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 10px;
+            }
+            }
+        }
+    
+}

@@ -12,6 +12,7 @@ import { TopBarComponent } from './layout/top-bar/top-bar.component';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { PageModule } from './page/page.module';
 import { LayoutModule } from './layout/layout.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LayoutModule } from './layout/layout.module';
     NbButtonModule,
 
     NbIconModule,
-    LayoutModule
+    LayoutModule,
+    NgbModule
     
   ],
   providers: [],
