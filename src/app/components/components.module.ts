@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TopBarComponent } from '../layout/top-bar/top-bar.component';
-import { NbActionsModule, NbCardModule, NbFormFieldModule, NbIconModule, NbInputModule, NbLayoutModule, NbListModule, NbThemeModule } from '@nebular/theme';
+import { NbActionsModule, NbButtonModule, NbCardModule, NbFormFieldModule, NbIconModule, NbInputModule, NbLayoutModule, NbListModule, NbThemeModule } from '@nebular/theme';
 import { NavBarComponent } from '../layout/nav-bar/nav-bar.component';
 import { FormWrapperComponent } from './form-wrapper/form-wrapper.component';
 import { LinkDirective } from './link/link.directive';
@@ -11,6 +11,7 @@ import { ImageSliderComponent } from './image-slider/image-slider.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { ProductContentComponent } from './product-content/product-content.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 
 
 
@@ -23,7 +24,8 @@ import { ProductContentComponent } from './product-content/product-content.compo
     SideCategoryComponent,
     ImageSliderComponent,
     HeaderComponent,
-    ProductContentComponent
+    ProductContentComponent,
+    ProductCardComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +37,8 @@ import { ProductContentComponent } from './product-content/product-content.compo
     NbInputModule,
     NbListModule,
     NbCardModule,
-    NgbCarouselModule
+    NgbCarouselModule,
+    NbButtonModule
   ],
   exports:[
     NbIconModule,
@@ -44,7 +47,8 @@ import { ProductContentComponent } from './product-content/product-content.compo
     SideCategoryComponent,
     ImageSliderComponent,
     HeaderComponent,
-    ProductContentComponent
+    ProductContentComponent,
+    ProductCardComponent
   ]
 })
 export class ComponentsModule { }

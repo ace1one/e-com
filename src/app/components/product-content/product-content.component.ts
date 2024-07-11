@@ -11,7 +11,6 @@ export class ProductContentComponent {
 @Input('subname') subtitle!:string;
 @Input()
 set showButton(value:string | boolean){
-  console.log(value)
   this.showBtn = coerceBooleanProperty(value)
 }
 
