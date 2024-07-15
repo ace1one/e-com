@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NbIconLibraries } from '@nebular/theme';
+import { ecomIcons } from '../../components/icons/icons';
 
 @Component({
   selector: 'ecom-nav-bar',
@@ -9,5 +11,7 @@ import { Component } from '@angular/core';
   }
 })
 export class NavBarComponent {
-
+  constructor(private iconLibraries: NbIconLibraries) {
+    this.iconLibraries.registerSvgPack('ecom-header', ecomIcons);
+  }
 }

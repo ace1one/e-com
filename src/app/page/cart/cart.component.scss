@@ -1,0 +1,36 @@
+@import '../../../theme.scss';
+.cart{
+    &__container{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__list{
+        width: 69%;
+    }
+    &__checkout{
+        width: 30%;
+    }
+
+    &__items{
+        display: flex;
+        align-items: center;
+    }
+    &__itemname{
+        text-wrap: balance;
+        margin-left: 10px;
+        width: 425px;
+    }
+    &__price{
+        width: 125px;
+        &--final{
+            color: nb-theme(color-primary-500);
+            font-weight: bold;
+            font-size: 16px;
+        }
+        &--discount{
+            text-decoration: line-through;
+            color: nb-theme(color-basic-400);
+        }
+    }
+}

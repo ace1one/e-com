@@ -61,6 +61,14 @@
             }
         }
     }
+    &__right{
+        &--profile{
+            margin-left: 20px;
+        }
+        &--favorites{
+            margin-right: 20px;
+        }
+    }
 }
 
 .custom-nb-form-field .custom-input {
