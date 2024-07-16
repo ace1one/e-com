@@ -28,17 +28,17 @@ $nb-themes: nb-register-theme(
 
      
 
-        color-primary-25: lighten(#6C4AB6, 45%),
-        color-primary-50: lighten(#6C4AB6, 35%),
-        color-primary-100: lighten(#6C4AB6, 25%),
-        color-primary-200: lighten(#6C4AB6, 15%),
-        color-primary-300: lighten(#6C4AB6, 10%),
-        color-primary-400: lighten(#6C4AB6, 5%),
-        color-primary-500: #6C4AB6,
-        color-primary-600: darken(#6C4AB6, 5%),
-        color-primary-700: darken(#6C4AB6, 10%),
-        color-primary-800: darken(#6C4AB6, 15%),
-        color-primary-900: darken(#6C4AB6, 20%),
+        color-primary-25: lighten(#6A5ACD, 45%),
+        color-primary-50: lighten(#6A5ACD, 35%),
+        color-primary-100: lighten(#6A5ACD, 25%),
+        color-primary-200: lighten(#6A5ACD, 15%),
+        color-primary-300: lighten(#6A5ACD, 10%),
+        color-primary-400: lighten(#6A5ACD, 5%),
+        color-primary-500: #6A5ACD,
+        color-primary-600: darken(#6A5ACD, 5%),
+        color-primary-700: darken(#6A5ACD, 10%),
+        color-primary-800: darken(#6A5ACD, 15%),
+        color-primary-900: darken(#6A5ACD, 20%),
         
         color-primary-transparent-100: rgba(251, 19, 20, 0.08),
         color-primary-transparent-200: rgba(251, 19, 20, 0.16),
@@ -150,9 +150,6 @@ $nb-themes: nb-register-theme(
         color-shadow-depth-basic-extra-small: #1118270f,
         color-shadow-depth-medium-larger-offset: #1118270f,
         color-shadow-depth-medium-smaller-offset: #11182714,
-
-     
-
     ),
     custom,
     default

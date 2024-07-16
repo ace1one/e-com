@@ -1,57 +1,83 @@
 <div class="cart__container">
     <div class="cart__list">
+        <form [formGroup]="formValue">
         <nb-card>
-            <nb-card-body>
-                <nb-checkbox>All</nb-checkbox>
-            </nb-card-body>
-        </nb-card>
-
-        <nb-card>
-            <nb-card-body>
-            <div class="cart__items">
-                <nb-checkbox></nb-checkbox>
-                <div class="cart__itemname">
-                    Green Leaf-131 Wireless Bluetooth Earbuds | 27 Hours | HD Voice | Stereo Sound | 12mm Drive | Big
-                </div>
-                <div class="cart__price">
+        <nb-card-body>
+          <nb-checkbox [indeterminate]="" formControlName="allChecked" (checkedChange)="checkAll($event)" >All</nb-checkbox>
+        </nb-card-body>
+      </nb-card>
+  
+     
+        <div formArrayName="items">
+          <div *ngFor="let item of itemsFormArray.controls; let i = index" [formGroupName]="i">
+            <nb-card>
+              <nb-card-body>
+                <div class="cart__items">
+                  <div class="cart__itemname">
+                    <nb-checkbox formControlName="check" (checkedChange)="toggleItemCheck($event,i)">
+                      {{ item.get('name')?.value  }}
+                    </nb-checkbox>
+                  </div>
+                  <div class="cart__price">
                     <div class="cart__price--final">
-                        Rs. 1,299
+                      Rs. {{ item.get('price')?.value |numberFormat }}
                     </div>
                     <div class="cart__price--discount">
-                        Rs. 1,999
+                      Rs. {{ item.get('discountPrice')?.value | numberFormat }}
                     </div>
                     <div class="cart__price-descper">
-                        -35%
+                      {{ item.get('discount')?.value }}%
                     </div>
-                </div>
-
-                <div class="cart__qty">
-                    <div class="cart__qty--descrese">
-
+                  </div>
+      
+                  <div class="cart__qty">
+                    <div class="cart__qty--descrese" (click)="descreaseQty(i)">
+                      <nb-icon icon="minus" pack="ecom-header"></nb-icon>
                     </div>
-                   <div class="cart__qty--input">
-                    <input nbInput />
-                   </div>
-                   <div class="cart__qty--increase">
-
-                   </div>
+                    <div class="cart__qty--input">
+                      <input formControlName="qty" nbInput  class="cart___qty--input-box" />
+                    </div>
+                    <div class="cart__qty--increase" (click)="increaseQty(i)">
+                      <nb-icon icon="plus" pack="ecom-header"></nb-icon>
+                    </div>
+                  </div>
                 </div>
-            </div>
-               
-                
-            </nb-card-body>
-        </nb-card>
+              </nb-card-body>
+            </nb-card>
+          </div>
+        </div>
+      </form>
+      
+  
     </div>
-
+  
     <div class="cart__checkout">
-        <nb-card>
-            <nb-card-body>
-                sadasdasd
-            </nb-card-body>
-        </nb-card>
+      <nb-card>
+        <nb-card-body>
+         <h5>Order Summary</h5>
+         <hr>
+         <div class="cart__checkout--summary">
+          <div class="cart__checkout--label">Sub Total:</div>
+          <div class="cart__checkout--value">{{ subTotal | numberFormat}} /-</div>
+         </div >
+
+         <div class="cart__checkout--summary">
+          <div class="cart__checkout--label">Delivery Charge:</div>
+          <div class="cart__checkout--value">{{ deliveryCharge | numberFormat}} /-</div>
+         </div >
+        <div class="cart__checkout--voucher">
+          <div class="cart__checkout--input">
+            <input  nbInput placeholder="Enter Voucher Code"   />
+          </div>
+        
+          <button nbButton status="primary">Apply</button>
+        </div>
+       
+         <h5 class="cart__checkout--total">Rs. {{total | numberFormat}} /-</h5>
+
+         <button nbButton status="primary" fullWidth>Checkout ({{totalCount}})</button>
+        </nb-card-body>
+      </nb-card>
     </div>
-</div>
-
-
-
-
+  </div>
+  
