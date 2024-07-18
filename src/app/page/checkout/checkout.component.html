@@ -1,0 +1,30 @@
+<!-- <nb-tabset fullWidth (changeTab)="onTabChange($event)">
+    <nb-tab tabTitle="Cart" tabIcon="shopping-cart-outline" [disabled]="isTabDisabled(1)">
+        <p>Cart details go here.</p>
+      </nb-tab>
+
+    <nb-tab tabTitle="Address" tabIcon="pin-outline" [disabled]="isTabDisabled(2)">
+        <p>Address details go here.</p>
+      </nb-tab>
+      
+      <nb-tab tabTitle="Payment" tabIcon="credit-card-outline" [disabled]="isTabDisabled(3)">
+        <p>Payment details go here.</p>
+      </nb-tab>
+</nb-tabset> -->
+
+<nb-tabset fullWidth (changeTab)="onTabChange($event)">
+    <nb-tab *ngFor="let tab of tabs; let i = index" [tabTitle]="tab.title" [tabIcon]="tab.icon" >
+    
+     <section *ngIf="tab.title === 'Cart'">
+        <ecom-cart></ecom-cart>
+     </section>
+
+     <section *ngIf="tab.title === 'Delivery Address'">
+        <ecom-delivery-address></ecom-delivery-address>
+     </section>
+        
+     <section *ngIf="tab.title !== 'Cart'">
+        {{ tab.title}}
+     </section>
+    </nb-tab>
+  </nb-tabset>

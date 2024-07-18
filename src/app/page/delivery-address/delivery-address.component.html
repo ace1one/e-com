@@ -1,0 +1,63 @@
+<div class="delivery-address__container">
+    <div class="delivery-address__content">
+        <div class="delivery-address__address-detail">
+            <nb-card>
+                <nb-card-body>
+                  <div class="delivery-address__no-address">
+                     <nb-icon icon="plus-outline"></nb-icon>
+                      Add new Delivery Address
+                  </div>
+    
+                </nb-card-body>
+            </nb-card>
+
+            <div class="delivery-address__user-address">
+                <div (click)="onClickAddress(data,i)" [ngClass]="{'delivery-address__active-address': data.isDefault,'delivery-address__notactive-address': !data.isDefault}"  *ngFor="let data of addressData;let i = index">
+                    <nb-card>
+                        <nb-card-body>
+                            <div class="delivery-address__fullname">
+                                <div class="delivery-address__name">
+                                    {{ data.name}}
+                                </div>
+                                <nb-tag-list *ngIf="data.isDefault">
+                                    <nb-tag  status="primary" size="small" appearance="outline" text="default"></nb-tag>
+                                </nb-tag-list>
+                            </div>
+                            <div class="delivery-address__contact">
+                                <nb-icon icon="phone-outline"></nb-icon>
+                                <div class="delivery-address__contact--number">
+                                   {{ data.phoneNumber}}
+                                </div>
+                            </div>
+                            <div class="delivery-address__email">
+                                <nb-icon icon="email-outline"></nb-icon>
+                                <div class="delivery-address__email--name">
+                                    {{ data.email}}
+                                </div>
+                            </div>
+
+                            <div class="delivery-address__location">
+                               <div class="icon">
+                                <nb-icon icon="pin-outline"></nb-icon>
+                               </div>
+                                <div class="delivery-address__location--name">
+                                   
+                                    {{ data.address}}
+                                </div>
+                            </div>
+                        </nb-card-body>
+                    </nb-card>
+                  </div>
+               
+            </div>
+
+        </div>
+        <div class="delivery-address__items">
+
+        </div>
+    </div>
+
+    <div class="delivery-address__summary">
+        
+    </div>
+</div>

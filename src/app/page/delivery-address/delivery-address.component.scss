@@ -1,0 +1,98 @@
+@import '../../../theme.scss';
+.delivery-address{
+    &__container{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__content{
+        width: 69%;
+    }
+    &__address-detail{
+        nb-card{
+            border-color: white;
+            nb-card-body{
+                background-color: white;
+            }
+        }
+    }
+    &__no-address{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: nb-theme(color-primary-500);
+        cursor: pointer;
+        
+    }
+    &__notactive-address{
+        width: 380px;
+        &:hover{
+            cursor: pointer;
+            nb-card{
+                width: 380px;
+                border-color: nb-theme(color-primary-500);
+                nb-card-body{
+                    background-color: nb-theme(color-primary-transparent-100);
+                }
+            }
+        }
+    }
+    &__user-address{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__active-address{
+        nb-card{
+            width: 380px;
+            border-color: nb-theme(color-primary-500);
+            nb-card-body{
+                background-color: nb-theme(color-primary-transparent-100);
+            }
+        }
+       
+    }
+    &__fullname{
+        display: flex;
+        align-items: center;
+        margin: 0 0 6px 0;
+        font-weight: 600;
+    }
+    &__name{
+        margin: 0 5px 0 0 ;
+    }
+    &__contact{
+        display: flex;
+        align-items: center;
+        margin: 0 0 6px 0;
+        nb-icon{
+            color: nb-theme(color-basic-500);
+        }
+        &--number{
+            margin: 0 0 0 8px;
+        }
+    }
+    &__location{
+        display: flex;
+        align-items: center;
+        nb-icon{
+            color: nb-theme(color-basic-500);
+        }
+        &--name{
+            margin: 0 0 0 8px;
+        }
+    }
+    &__email{
+        display: flex;
+        align-items: center;
+        margin: 0 0 6px 0;
+        nb-icon{
+            color: nb-theme(color-basic-500);
+        }
+        &--name{
+            margin: 0 0 0 8px;
+        }
+    }
+
+
+}

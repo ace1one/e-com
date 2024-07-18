@@ -4,7 +4,7 @@ import { ecomIcons } from '../../components/icons/icons';
 import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-cart',
+  selector: 'ecom-cart',
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })
