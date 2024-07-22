@@ -12,6 +12,7 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { ProductContentComponent } from './product-content/product-content.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { ButtonLoaderComponent } from './button-loader/button-loader.component';
 
 
 
@@ -25,7 +26,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
     ImageSliderComponent,
     HeaderComponent,
     ProductContentComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ButtonLoaderComponent
   ],
   imports: [
     CommonModule,
@@ -48,7 +50,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
     ImageSliderComponent,
     HeaderComponent,
     ProductContentComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ButtonLoaderComponent
   ]
 })
 export class ComponentsModule { }

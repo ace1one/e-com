@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
-import { NbButtonModule, NbFormFieldModule, NbInputModule, NbLayoutModule, NbThemeModule } from '@nebular/theme';
+import { NbButtonModule, NbCardModule, NbFormFieldModule, NbInputModule, NbLayoutModule, NbSelectModule, NbSpinnerModule, NbThemeModule } from '@nebular/theme';
 import { AuthRoutingModule } from './auth-routing.module';
 import { ComponentsModule } from '../components/components.module';
+import { SignupComponent } from './signup/signup.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 
 @NgModule({
   declarations: [
-    LoginComponent
+    LoginComponent,
+    SignupComponent,
   ],
   imports: [
     CommonModule,
@@ -20,7 +24,12 @@ import { ComponentsModule } from '../components/components.module';
     NbFormFieldModule,
     NbInputModule,
     NbButtonModule,
-    ComponentsModule
+    NbCardModule,
+    NbSelectModule,
+    NbSpinnerModule,
+    ComponentsModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class AuthModule { }

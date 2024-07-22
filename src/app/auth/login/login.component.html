@@ -18,17 +18,17 @@
         
                 <div class="ecom-login-form">
         
-                    <form>
+                    <form [formGroup]="formValue" (ngSubmit)="login()">
                         <ecom-form-wrapper label="Email">
                             <nb-form-field>
-                                <input type="text" nbInput fullWidth status="primary" placeholder="Enter Email">
+                                <input type="text" formControlName="email" nbInput fullWidth status="primary" placeholder="Enter Email">
                             </nb-form-field>
         
                         </ecom-form-wrapper>
         
                         <ecom-form-wrapper label="Password">
                             <nb-form-field>
-                                <input [type]="getInputType()" nbInput fullWidth status="primary" placeholder="Enter Password">
+                                <input formControlName="password" [type]="getInputType()" nbInput fullWidth status="primary" placeholder="Enter Password">
                                 <nb-icon nbSuffix (click)="toggleShowPassword()"
                                     [icon]="showPassword ? 'eye-outline' : 'eye-off-2-outline'" pack="eva"
                                     [attr.aria-label]="showPassword ? 'hide password' : 'show password'">

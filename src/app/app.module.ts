@@ -13,6 +13,8 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { PageModule } from './page/page.module';
 import { LayoutModule } from './layout/layout.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { JwtInterceptor } from './helpers/jwt.interceptor';
 
 
 @NgModule({
@@ -23,18 +25,18 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
- 
     NbThemeModule.forRoot({ name: 'custom' }),
     NbEvaIconsModule,
     NbLayoutModule,
     NbButtonModule,
-
     NbIconModule,
     LayoutModule,
-    NgbModule
-    
+    NgbModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

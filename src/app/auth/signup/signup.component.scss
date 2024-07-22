@@ -1,0 +1,27 @@
+.signup{
+    &__container{
+        margin:  120px 0;
+       
+    }
+    &__title{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 0 15px 0;
+    }
+    &__content{
+        
+        margin: 0 220px;
+      &--form{
+        display: flex;
+        justify-content: space-between;
+      } 
+      &--left{
+        width: 48%;
+      }
+      &--right{
+        width: 48%;
+      }
+    }
+}

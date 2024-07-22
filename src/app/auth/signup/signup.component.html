@@ -1,0 +1,71 @@
+<nb-layout>
+    <nb-layout-column>
+        <div class="signup__container">
+            <div class="signup__title">
+                <h3>SIGN UP</h3>
+                <p>Create Your E-com Account</p>
+            </div>
+            <div class="signup__content">
+                <nb-card>
+                    <nb-card-body>
+                        <form [formGroup]="formValue" (ngSubmit)="signup()">
+                            <div class="signup__content--form">
+                                <div class="signup__content--left">
+                                    <ecom-form-wrapper label="Full Name">
+                                        <nb-form-field>
+                                            <input  formControlName="name" type="text" nbInput fullWidth status="primary" placeholder="Enter Fullname">
+                                        </nb-form-field>
+                    
+                                    </ecom-form-wrapper>
+                                    <ecom-form-wrapper label="Email">
+                                        <nb-form-field>
+                                            <input formControlName="email" type="text" nbInput fullWidth status="primary" placeholder="Enter Email">
+                                        </nb-form-field>
+                                    </ecom-form-wrapper>
+                                    <ecom-form-wrapper label="Phone Number">
+                                        <nb-form-field>
+                                            <input formControlName="phone_number" type="number" nbInput fullWidth status="primary" placeholder="Enter Phone Number">
+                                        </nb-form-field>
+                                    </ecom-form-wrapper>
+                                </div>
+                                <div class="signup__content--right">
+                                    <ecom-form-wrapper label="Gender">
+                                        <br>
+                                        <nb-select formControlName="gender" fullWidth placeholder="Select Gender" status="primary">
+                                            <nb-option *ngFor="let g of gender" value="{{g.id}}">{{ g.name }}</nb-option>
+                                           
+                                          </nb-select>
+                                    </ecom-form-wrapper>
+                                    <ecom-form-wrapper label="Password">
+                                        <nb-form-field>
+                                            <input formControlName="password" [type]="getInputType()" nbInput fullWidth status="primary" placeholder="Enter Password">
+                                            <nb-icon nbSuffix (click)="toggleShowPassword()"
+                                                [icon]="showPassword ? 'eye-outline' : 'eye-off-2-outline'" pack="eva"
+                                                [attr.aria-label]="showPassword ? 'hide password' : 'show password'">
+                                            </nb-icon>
+                                        </nb-form-field>
+                                    </ecom-form-wrapper>
+    
+                                    <ecom-form-wrapper label="Confirm Password">
+                                        <nb-form-field>
+                                            <input formControlName="confirm_password" [type]="getConfirmInputType()" nbInput fullWidth status="primary" placeholder="Enter Confirm Password">
+                                            <nb-icon nbSuffix (click)="toggleConfirmPassword()"
+                                                [icon]="showConfirmPassword ? 'eye-outline' : 'eye-off-2-outline'" pack="eva"
+                                                [attr.aria-label]="showConfirmPassword ? 'hide password' : 'show password'">
+                                            </nb-icon>
+                                        </nb-form-field>
+                                    </ecom-form-wrapper>
+                                    <button type="submit" nbButton status="primary" fullWidth >Sign Up</button>
+                                </div>
+                            </div>
+                        </form>
+                 
+                       
+                    </nb-card-body>
+                </nb-card>
+        
+            </div>
+        </div>
+    </nb-layout-column>
+</nb-layout>    
+
