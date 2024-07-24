@@ -1,4 +1,4 @@
-<div class="product-card__container" >
+<div #projectedContent class="product-card__container" [ngClass]="{'scrollable': hasArrow}">
         <nb-card size="small" class="product-card__content" *ngFor="let card of cards">
             <nb-card-body class="product-card__content--body">
                

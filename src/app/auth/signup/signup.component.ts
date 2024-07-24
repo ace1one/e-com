@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { gender } from '../../constant';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../services/auth/auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthHttpService } from '../../services/auth/auth.http.service';
 
 
 @Component({
@@ -17,7 +18,7 @@ showPassword = false;
 showConfirmPassword = false;
 formValue!: FormGroup
 
-constructor(private signupService:AuthService,
+constructor(private signupService:AuthHttpService,
   private fb:FormBuilder
 ){
   this.inititlizeForm()

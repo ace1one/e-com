@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NbIconLibraries } from '@nebular/theme';
 import { ecomHeaderIcons } from './header.icon';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
@@ -35,11 +35,19 @@ get showArrow(){
   return this.showArw;
 }
 
+@Output() clickArrow = new EventEmitter() 
+
 
 showBtn:boolean = false;
 showArw:boolean = false;
 constructor(private iconLibraries: NbIconLibraries) {
   this.iconLibraries.registerSvgPack('ecom-header', ecomIcons);
 }
+
+onClickArrow(prop:string){
+  this.clickArrow.emit(prop)
+}
+
+
 
 }

@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { category, CategoryService } from '../../services/category.service';
 
 @Component({
   selector: 'ecom-side-category',
   templateUrl: './side-category.component.html',
   styleUrl: './side-category.component.scss'
 })
-export class SideCategoryComponent {
+export class SideCategoryComponent implements OnInit {
 
       permission= [
         {
@@ -48,6 +49,17 @@ export class SideCategoryComponent {
         },
  
       ]
+constructor(private categoryService:CategoryService){}
 
+ngOnInit(): void {
+ this.category()
+}
+categoryList!:category[]
+
+category(){
+  this.categoryService.getCategory().subscribe((res:category[])=>{
+    this.categoryList =  res;
+  })
+}
 
 }

@@ -7,11 +7,8 @@
     </div>
 
     <div class="home__product-content">
-        <ecom-product-content name="Today's" subname="Flash Sales" showArrow="yes">
-          
-            <ecom-product-card></ecom-product-card>
-           
-            
+        <ecom-product-content name="Today's" subname="Flash Sales" showArrow="yes" (isArrow)="isArrow($event)" (arrowClicked)="onClickArrow($event)">
+            <ecom-product-card [hasArrow]="hasArrow" [arrowSide]="arrowSide"></ecom-product-card>
         </ecom-product-content>
     </div>
 

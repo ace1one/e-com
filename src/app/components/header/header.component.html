@@ -11,10 +11,10 @@
             {{ subtitle }}
         </div>
         <div *ngIf="showArw" class="header__subtitle--arrow">
-            <div class="header__subtitle--arrow--left">
+            <div class="header__subtitle--arrow--left" (click)="onClickArrow('left')">
                 <nb-icon icon="arrow-left" pack="ecom-header"></nb-icon>
             </div>
-            <div class="header__subtitle--arrow--right">
+            <div class="header__subtitle--arrow--right" (click)="onClickArrow('right')">
                  <nb-icon icon="arrow-right" pack="ecom-header"></nb-icon>
             </div>
         </div>

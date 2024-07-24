@@ -1,4 +1,12 @@
+@import '../../../theme.scss';
 nb-list {
     min-width: 10rem;
     max-width: 20rem;
+    height: 355px;
+    nb-list-item{
+      cursor: pointer;
+      &:hover{
+        color: nb-theme(color-primary-500);
+      }
+    }
   }
